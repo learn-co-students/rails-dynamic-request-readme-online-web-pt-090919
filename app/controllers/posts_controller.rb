@@ -1,9 +1,5 @@
-class PostsController < ApplicationController
+class PostsController <  ApplicationController
     def show
-        if @post = Post.find(params[:id])
-            render 'show'
-        else
-            render 'errors/error'
-        end
+        @post = Post.find(params[:id])
     end
-  end
+end
